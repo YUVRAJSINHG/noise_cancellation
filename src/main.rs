@@ -68,7 +68,7 @@ fn main() -> Result<(), anyhow::Error> {
         
             stream.play()?;
         
-            // Let recording go for roughly three seconds.
+            //  Let recording go for roughly three seconds.
             std::thread::sleep(std::time::Duration::from_millis(100));
             drop(stream);
             writer.lock().unwrap().take().unwrap().finalize()?;
